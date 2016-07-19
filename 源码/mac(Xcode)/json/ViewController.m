@@ -36,7 +36,13 @@
 }
 - (IBAction)btnClick:(id)sender {
     NSTextView *tv= (NSTextView *)self.label.contentView.documentView;
-
+    tv.automaticTextReplacementEnabled = NO;
+    tv.automaticDataDetectionEnabled = NO;
+    tv.automaticLinkDetectionEnabled = NO;
+    tv.automaticDashSubstitutionEnabled = NO;
+    tv.automaticSpellingCorrectionEnabled = NO;
+    tv.automaticQuoteSubstitutionEnabled = NO;
+    
     self.mulStr = [NSMutableString string];
     NSString *str = tv.string;
     
